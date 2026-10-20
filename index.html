@@ -93,7 +93,7 @@ const BAB={Harian:'Tugas Harian',Mingguan:'Tugas Mingguan',Bulanan:'Tugas Bulana
 const S={tok:null,user:null,tasks:[],tab:'home',bab:'Harian',mon:null,open:{},img:{},ready:0};
 let busyN=0;const busy=()=>document.body.classList.toggle('busy',busyN>0);
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const API_URL='https://script.google.com/macros/s/AKfycbw5R5-Kc3oGReeXNOLS9uSo6RZFsFcC4Q60k6ec5fOj2adFxZ_XkJ_-4-mmNXl5um3o/exec'; // ganti dengan URL /exec Anda
+const API_URL='https://script.google.com/macros/s/AKfycbwyfeGsngomfDyVcEJGC1ZD7Y-7m5sWh33gx9rig4jszaJRVDTb9KK15pXns1EqEr6l/exec'; // ganti dengan URL /exec Anda
 const call=async(fn,...a)=>{busyN++;busy();
   try{
     const r=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({fn,args:a})});
